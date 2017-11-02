@@ -3,6 +3,6 @@ class AssetsController < ApplicationController
   end
 
   def create
-     render plain: params[:asset].inspect
+     render plain: params[:asset]
   end
 end
