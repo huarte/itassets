@@ -1,12 +1,27 @@
 <%= form_with scope: :asset, url: assets_path, local: true do |form| %>
   <p>
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+    <%= form.label :serialnumber %><br>
+    <%= form.text_field :serialnumber %>
   </p>
 
   <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
+    <%= form.label :creationdate %><br>
+    <%= date_select :asset, :creationdate %>
+  </p>
+
+  <p>
+    <%= form.label :enddate %><br>
+    <%= date_select :asset, :enddate %>
+  </p>
+
+  <p>
+    <%= form.label :brand %><br>
+    <%= form.text_field :brand %>
+  </p>
+
+  <p>
+    <%= form.label :brand %><br>
+    <%= form.text_field :brand %>
   </p>
 
   <p>
