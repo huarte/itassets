@@ -3,6 +3,14 @@ class AssetsController < ApplicationController
   end
 
   def create
-     render plain: params[:asset]
+    @asset = Asset.new(params[:asset])
+
+    @asset.save
+    redirect_to @asset
+  end
+
+  private
+  def asset_params
+    params.require(:asset).permit(:serialnumber, :creationdate, :enddate, :brand, :model)
   end
 end
